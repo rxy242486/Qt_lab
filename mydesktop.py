@@ -5,7 +5,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from mainwindow import Ui_MainWindow
 from childform import Ui_childform
-from process_manager import Table
+from process_manage import Table
 import threading
 class mywindow(QtWidgets.QMainWindow,Ui_MainWindow):
     def __init__(self):
@@ -25,7 +25,7 @@ class mywindow(QtWidgets.QMainWindow,Ui_MainWindow):
     def showtime(self):
         datetime = QDateTime.currentDateTime()
         text = datetime.toString()
-        self.statusBar.showMessage(80*" "+text)
+        self.statusBar.showMessage(90*" "+text)
     def openNotepad(self):
         self.gridLayout.addWidget(self.child)
         self.child.show()

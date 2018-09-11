@@ -18,7 +18,6 @@ class Ui_childform(object):
         self.pushButton = QtWidgets.QPushButton(childform)
         self.pushButton.setGeometry(QtCore.QRect(0, 0, 89, 25))
         self.pushButton.setObjectName("pushButton")
-
         self.retranslateUi(childform)
         self.pushButton.clicked.connect(childform.close)
         QtCore.QMetaObject.connectSlotsByName(childform)

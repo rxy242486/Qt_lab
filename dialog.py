@@ -11,25 +11,18 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(400, 300)
-        self.pushButton = QtWidgets.QPushButton(Dialog)
-        self.pushButton.setGeometry(QtCore.QRect(30, 70, 80, 25))
-        self.pushButton.setObjectName("pushButton")
-        self.pushButton_2 = QtWidgets.QPushButton(Dialog)
-        self.pushButton_2.setGeometry(QtCore.QRect(270, 70, 89, 25))
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.textEdit = QtWidgets.QTextEdit(Dialog)
-        self.textEdit.setGeometry(QtCore.QRect(100, 130, 201, 131))
-        self.textEdit.setObjectName("textEdit")
+        Dialog.resize(1232, 668)
+        self.graphicsView = QtWidgets.QGraphicsView(Dialog)
+        self.graphicsView.setGeometry(QtCore.QRect(240, 141, 501, 281))
+        self.graphicsView.setObjectName("graphicsView")
+        self.calendarWidget = QtWidgets.QCalendarWidget(Dialog)
+        self.calendarWidget.setGeometry(QtCore.QRect(260, 180, 456, 177))
+        self.calendarWidget.setObjectName("calendarWidget")
 
         self.retranslateUi(Dialog)
-        self.pushButton.clicked.connect(Dialog.hello)
-        self.pushButton_2.clicked.connect(Dialog.nihao)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.pushButton.setText(_translate("Dialog", "hello"))
-        self.pushButton_2.setText(_translate("Dialog", "nihao"))
 
