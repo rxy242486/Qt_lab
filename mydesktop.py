@@ -6,14 +6,16 @@ from PyQt5.QtWidgets import *
 from mainwindow import Ui_MainWindow
 from childform import Ui_childform
 from process_manage import Table
-import threading
+from FileWidget import FileWidget
 class mywindow(QtWidgets.QMainWindow,Ui_MainWindow):
     def __init__(self):
         super(mywindow,self).__init__()
         self.setupUi(self)
         self.child = childform()
         self.child1 = Table()
+        self.child2 = FileWidget()
         self.actionNotepad.triggered.connect(self.openNotepad)
+        self.actionFile_Manager.triggered.connect(self.openfilemanager)
         self.actionTask_Manager.triggered.connect(self.opentaskmanager)
         self.actionClose_Window.triggered.connect(self.close)
         self.statusBar = QStatusBar()
@@ -33,6 +35,10 @@ class mywindow(QtWidgets.QMainWindow,Ui_MainWindow):
     def opentaskmanager(self):
         self.gridLayout.addWidget(self.child1)
         self.child1.show()
+
+    def openfilemanager(self):
+        self.gridLayout.addWidget(self.child2)
+        self.child2.show()
 class childform(QtWidgets.QWidget,Ui_childform):
     def __init__(self):
         super(childform,self).__init__()
