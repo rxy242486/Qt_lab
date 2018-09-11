@@ -15,6 +15,7 @@ class mywindow(QtWidgets.QMainWindow,Ui_MainWindow):
         self.child1 = Table()
         self.actionNotepad.triggered.connect(self.openNotepad)
         self.actionTask_Manager.triggered.connect(self.opentaskmanager)
+        self.actionClose_Window.triggered.connect(self.close)
         self.statusBar = QStatusBar()
         self.setStyleSheet("#MainWindow{border-image:url(bg1.jpg);}")
         self.setStatusBar(self.statusBar)
@@ -24,7 +25,7 @@ class mywindow(QtWidgets.QMainWindow,Ui_MainWindow):
     def showtime(self):
         datetime = QDateTime.currentDateTime()
         text = datetime.toString()
-        self.statusBar.showMessage(130*" "+text)
+        self.statusBar.showMessage(80*" "+text)
     def openNotepad(self):
         self.gridLayout.addWidget(self.child)
         self.child.show()

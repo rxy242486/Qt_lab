@@ -36,9 +36,12 @@ class Ui_MainWindow(object):
         self.actionFile_Manager.setObjectName("actionFile_Manager")
         self.actionTask_Manager = QtWidgets.QAction(MainWindow)
         self.actionTask_Manager.setObjectName("actionTask_Manager")
+        self.actionClose_Window = QtWidgets.QAction(MainWindow)
+        self.actionClose_Window.setObjectName("actionClose_Window")
         self.menuMy_Desktop.addAction(self.actionNotepad)
         self.menuMy_Desktop.addAction(self.actionFile_Manager)
         self.menuMy_Desktop.addAction(self.actionTask_Manager)
+        self.menuMy_Desktop.addAction(self.actionClose_Window)
         self.menubar.addAction(self.menuMy_Desktop.menuAction())
 
         self.retranslateUi(MainWindow)
@@ -51,4 +54,5 @@ class Ui_MainWindow(object):
         self.actionNotepad.setText(_translate("MainWindow", "Notepad"))
         self.actionFile_Manager.setText(_translate("MainWindow", "File Manager"))
         self.actionTask_Manager.setText(_translate("MainWindow", "Task Manager"))
+        self.actionClose_Window.setText(_translate("MainWindow", "Close Window"))
 
